@@ -21,3 +21,5 @@ obj/
 .idea/
 
 *.iml
+
+out/
