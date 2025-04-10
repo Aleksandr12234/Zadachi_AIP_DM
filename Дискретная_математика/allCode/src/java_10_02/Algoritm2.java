@@ -3,7 +3,6 @@ package java_10_02;
 import mainObjects.MyPoint;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Algoritm2 {
     public static void update(MyPoint[] points){

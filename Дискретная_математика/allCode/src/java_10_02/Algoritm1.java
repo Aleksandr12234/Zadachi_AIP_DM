@@ -4,10 +4,12 @@ import mainObjects.MyPoint;
 import java.util.Arrays;
 
 public class Algoritm1 {
-    public static void update(MyPoint[] points){
+    public static boolean sout=true;
+
+    public static int update(MyPoint[] points){
         if(points.length==0){
-            System.out.println("Графов нет");
-            return;
+            if(sout)System.out.println("Графов нет");
+            return 0;
         }
 
         int[] grafNamberPoint=new int[points.length];
@@ -25,6 +27,7 @@ public class Algoritm1 {
             }
         }
 
-        System.out.println("(Алгоритм 1) Количество графов: "+ Arrays.stream(grafNamberPoint).max().getAsInt());
+        if(sout)System.out.println("(Алгоритм 1) Количество графов: "+ Arrays.stream(grafNamberPoint).max().getAsInt());
+        return Arrays.stream(grafNamberPoint).max().getAsInt();//для алгоритма крускала
     }
 }

@@ -2,6 +2,8 @@ package mainObjects;
 
 import java_10_02.Algoritm1;
 import java_10_02.Algoritm2;
+import java_13_02.AlgoritmKruskala;
+import java_13_02.AlgoritmPrima;
 
 import java.io.File;
 import java.util.Scanner;
@@ -31,6 +33,7 @@ public class Main {
         }
 
         alg10_02(points);
+        alg13_02(points, s);
     }
 
     static void alg10_02(MyPoint[] points){
@@ -39,5 +42,12 @@ public class Main {
         // 2)Вычеркивание из массива
         Algoritm1.update(points);
         Algoritm2.update(points);
+    }
+
+    static void alg13_02(MyPoint[] points, String[] s){
+        // 1)Прима
+        // 2)Краскала
+        AlgoritmPrima.update(points, s);
+        AlgoritmKruskala.update(points, s);
     }
 }
