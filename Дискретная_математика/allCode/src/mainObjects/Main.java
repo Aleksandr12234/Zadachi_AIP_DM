@@ -4,6 +4,7 @@ import java_10_02.Algoritm1;
 import java_10_02.Algoritm2;
 import java_13_02.AlgoritmKruskala;
 import java_13_02.AlgoritmPrima;
+import java_24_02.BridgeFinder;
 
 import java.io.File;
 import java.util.Scanner;
@@ -34,6 +35,7 @@ public class Main {
 
         alg10_02(points);
         alg13_02(points, s);
+        alg24_02(points);
     }
 
     static void alg10_02(MyPoint[] points){
@@ -49,5 +51,10 @@ public class Main {
         // 2)Краскала
         AlgoritmPrima.update(points, s);
         AlgoritmKruskala.update(points, s);
+    }
+
+    static void alg24_02(MyPoint[] points){
+        //Поиск мостов
+        BridgeFinder.update(points);
     }
 }
