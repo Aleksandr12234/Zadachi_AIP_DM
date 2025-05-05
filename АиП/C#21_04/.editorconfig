@@ -1,0 +1,10 @@
+[*.cs]
+
+# IDE0210: Преобразовать в операторы верхнего уровня
+csharp_style_prefer_top_level_statements = true
+
+# IDE0210: Преобразовать в операторы верхнего уровня
+dotnet_diagnostic.IDE0210.severity = none
+
+# CS8600: Преобразование литерала, допускающего значение NULL или возможного значения NULL в тип, не допускающий значение NULL.
+dotnet_diagnostic.CS8600.severity = silent
