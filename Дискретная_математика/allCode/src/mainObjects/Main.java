@@ -5,6 +5,7 @@ import java_10_02.Algoritm2;
 import java_13_02.AlgoritmKruskala;
 import java_13_02.AlgoritmPrima;
 import java_24_02.BridgeFinder;
+import java_27_02.AlgoritmDeikstra;
 
 import java.io.File;
 import java.util.Scanner;
@@ -28,14 +29,25 @@ public class Main {
             points[i]=new MyPoint();
             String[] list=s[i].split(" ");
             for(int j = 0; j<list.length; j++){
-                if(Integer.parseInt(list[j])!=0)
+                if (Integer.parseInt(list[j]) != 0) {
                     points[i].adjacentPoints.add(j);
+                    points[i].waySize.add(Integer.parseInt(list[j]));
+                }
+
             }
         }
 
+        /*
+        я где-то в алгоритмах меняю points,
+        так что все вместе эти функции лучше не запускать,
+        а то сломается:D
+        */
         alg10_02(points);
         alg13_02(points, s);
-        alg24_02(points);
+        alg27_02(points);
+
+        alg24_02(points);//вроде этот изменяет points, так что он будет в конце
+
     }
 
     static void alg10_02(MyPoint[] points){
@@ -56,5 +68,10 @@ public class Main {
     static void alg24_02(MyPoint[] points){
         //Поиск мостов
         BridgeFinder.update(points);
+    }
+
+    static void alg27_02(MyPoint[] points){
+        //поиск минимального пути до всех
+        AlgoritmDeikstra.update(points);
     }
 }
