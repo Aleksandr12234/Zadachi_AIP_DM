@@ -2,6 +2,7 @@ package mainObjects;
 
 import java_10_02.Algoritm1;
 import java_10_02.Algoritm2;
+import java_10_03.FordBelman;
 import java_13_02.AlgoritmKruskala;
 import java_13_02.AlgoritmPrima;
 import java_24_02.BridgeFinder;
@@ -45,6 +46,7 @@ public class Main {
         alg10_02(points);
         alg13_02(points, s);
         alg27_02(points);
+        alg10_03(points);
 
         alg24_02(points);//вроде этот изменяет points, так что он будет в конце
 
@@ -73,5 +75,9 @@ public class Main {
     static void alg27_02(MyPoint[] points){
         //поиск минимального пути до всех
         AlgoritmDeikstra.update(points);
+    }
+
+    static void alg10_03(MyPoint[] points){
+        FordBelman.update(points);
     }
 }
