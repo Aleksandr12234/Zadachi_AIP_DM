@@ -19,8 +19,8 @@ public class FordBelman {
             }
         }
 
-        System.out.println("Форд-Белман: ");
-        for (int i : weightMatrix[weightMatrix.length-1]) {
+        System.out.print("Форд-Белман: ");
+        for (Integer i : weightMatrix[weightMatrix.length-1]) {
             System.out.print(i+" ");
         }
         System.out.println();

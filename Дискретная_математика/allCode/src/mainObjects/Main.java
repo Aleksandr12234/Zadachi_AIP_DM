@@ -5,9 +5,9 @@ import java_10_02.Algoritm2;
 import java_10_03.FordBelman;
 import java_13_02.AlgoritmKruskala;
 import java_13_02.AlgoritmPrima;
+import java_13_03.Floid;
 import java_24_02.BridgeFinder;
 import java_27_02.AlgoritmDeikstra;
-
 import java.io.File;
 import java.util.Scanner;
 
@@ -47,6 +47,7 @@ public class Main {
         alg13_02(points, s);
         alg27_02(points);
         alg10_03(points);
+        alg13_03(points);
 
         alg24_02(points);//вроде этот изменяет points, так что он будет в конце
 
@@ -78,6 +79,12 @@ public class Main {
     }
 
     static void alg10_03(MyPoint[] points){
+        //форд-Белман
         FordBelman.update(points);
+    }
+
+    static void alg13_03(MyPoint[] points){
+        //флоид
+        Floid.update(points);
     }
 }

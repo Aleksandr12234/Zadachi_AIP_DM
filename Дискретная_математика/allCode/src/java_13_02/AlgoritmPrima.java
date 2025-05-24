@@ -15,6 +15,7 @@ public class AlgoritmPrima {
             int minZnach=-1;
 
             for (Integer i : uslesPoints) {
+                if (i<0 || i>= points.length)continue;
                 for (Integer j : points[i].adjacentPoints) {
                     if(uslesPoints.contains(j))continue;
                     int znach=getElement(table, i, j);
